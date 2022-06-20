@@ -10,6 +10,7 @@ import SwiftUI
 struct CTAShopView: View {
     var body: some View {
         ZStack {
+            Color("bgColor")
             Image("img-bg-team")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -29,6 +30,7 @@ struct CTAShopView: View {
             .background()
             .padding()
         }
+        .background(Color("bgColor"))
         .frame(height: 200)
     }
 }

@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 struct ContentLastNews: View {
     @State var limit = 3
+    @State private var isShowingDetailView = false
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
 
@@ -16,7 +18,11 @@ struct ContentLastNews: View {
                 CardNewsMinify()
             }
             
-            Button("Toutes les actualités") {}
+            NavigationLink(destination: Text("Second View"), isActive: $isShowingDetailView) { EmptyView() }
+            Button("Toutes les actualités") {
+                print("CLIC")
+                self.isShowingDetailView = true
+            }
                 .font(.system(size: 12))
                 .padding(.vertical, 10)
                 .padding(.horizontal, 25)
@@ -29,6 +35,8 @@ struct ContentLastNews: View {
                 .cornerRadius(4)
         }
         .padding()
+        .background(.white)
+        .padding(.bottom, 20.0)
     }
 }
 

@@ -9,55 +9,50 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            ZStack {
-                Color(.white)
-                    .ignoresSafeArea()
-                    .padding()
+        ZStack {
+            Color("primaryColor")
+                .ignoresSafeArea()
+            
+            ScrollView {
+                ZStack {
+                    Color(.white)
+                        .ignoresSafeArea()
+                        .padding()
+                    
+                    VStack(alignment: .center, spacing: 0) {
+                        ///- BARRE DU HAUT
+                        SubheaderView(title: "JS Cherbourg")
+                        
+                        ///- RÉCAPITULATIF DE L'ÉQUIPE
+                        RecapTeamView()
+                        
+                        ///- DERNIER MATCH
+                        SubheaderView(title: "Dernier Match")
+                        CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
 
-                VStack(alignment: .center, spacing: 0) {
-                    ///- BARRE DU HAUT
-                    SubheaderView(
-                        title: "JS Cherbourg", goToHome: true
-                    )
-                    
-                    ///- RÉCAPITULATIF DE L'ÉQUIPE
-                    RecapTeamView()
-                    
-                    ///- DERNIER MATCH
-                    SubheaderView(
-                        title: "Dernier Match", goToHome: false
-                    )
-                    CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
-                    
-                    ///- PROCHAIN MATCH
-                    SubheaderView(
-                        title: "Prochain Match", goToHome: false
-                    )
-                    CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
-                    
-                     
-                    ///- ACTUALITÉS
-                    SubheaderView(
-                        title: "Actualités", goToHome: false
-                    )
-                    ContentLastNews(limit: 3)
-                    
-                    ///- CTA
-                    CTAShopView()
-                        .padding(.top, 50)
-                    
+                        ///- PROCHAIN MATCH
+                        SubheaderView(title: "Prochain Match")
+                        CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
 
-                    ///- FOOTER
-                    SubheaderView(
-                        title: "🟣 PARCE QUE ICI C’EST CHERBOURG !", goToHome: false
-                    )
-                     
-                    // Spacer()
+
+                        ///- ACTUALITÉS
+                        SubheaderView(title: "Actualités")
+                        ContentLastNews(limit: 3)
+
+                        ///- CTA
+                        CTAShopView()
+
+
+                        ///- FOOTER
+                        FooterView()
+
+                        // Spacer()
+                    }
                 }
             }
+            // .ignoresSafeArea()
+            .padding(0)
         }
-        // .ignoresSafeArea()
     }
 }
 

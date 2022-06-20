@@ -1,4 +1,5 @@
 import SwiftUI
+import LocalAuthentication
 
 struct LoginView: View {
     @State private var username = ""
@@ -6,6 +7,8 @@ struct LoginView: View {
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
     @State private var showingLoginScreen = false
+    
+    @State private var isUnlocked = false
     
     var body: some View {
         NavigationView {
@@ -30,27 +33,39 @@ struct LoginView: View {
                         
                     TextField("Email", text: $username)
                         .padding()
-                        .frame(width: 300, height: 50)
-                        .cornerRadius(10)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
                         .border(.red, width: CGFloat(wrongUsername))
                         .preferredColorScheme(.light)
                         .background(Color.black.opacity(0.05))
                     
                     SecureField("Mot de passe", text: $password)
                         .padding()
-                        .frame(width: 300, height: 50)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
                         .cornerRadius(10)
                         .border(.red, width: CGFloat(wrongPassword))
                         .preferredColorScheme(.light)
                         .background(Color.black.opacity(0.05))
                     
-                    Button("Se connecter") {
-                        authUser(username: username, password: password)
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
-                    .background(Color("primaryColor"))
-                    .cornerRadius(10)
+                    VStack {
+                        Button("Se connecter") {
+                            authUser(username: username, password: password)
+                        }
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(Color("primaryColor"))
+                        .cornerRadius(10)
+                        
+                        Button("Utiliser sa connexion biométrique") {
+                            authenticateBiometry()
+                        }
+                        .foregroundColor(.white).frame(maxWidth: .infinity)
+                        .frame(height: 50)
+                        .background(Color("primaryColor").opacity(0.8))
+                        .cornerRadius(10)
+                    }.padding()
                     
                     NavigationLink(
                         destination: Text("You are logged in @\(username)"),
@@ -58,9 +73,30 @@ struct LoginView: View {
                         EmptyView()
                     }
                 }
-                
+                .padding(.horizontal, 30)
             }
             .navigationBarHidden(true)
+        }
+    }
+    
+    func authenticateBiometry() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "We need to unlock your data"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                (success, authenticationError) in
+                if success {
+                    // Authenticated successfully
+                    isUnlocked = true
+                } else {
+                    // There was a problem
+                }
+            }
+        } else {
+            // No Biometrics
         }
     }
     

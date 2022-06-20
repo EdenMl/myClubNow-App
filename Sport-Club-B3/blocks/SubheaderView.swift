@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SubheaderView: View {
     let title: String
-    let goToHome: Bool
+//    let goToHome: Bool
 
     var body: some View {
         ZStack {
@@ -23,11 +23,11 @@ struct SubheaderView: View {
 
                 Spacer()
                 
-                if goToHome {
-                    Image(systemName: "house.fill")
-                        .font(.system(size: 28, weight: .light))
-                        .foregroundColor(.white)
-                }
+//                if goToHome {
+//                    Image(systemName: "house.fill")
+//                        .font(.system(size: 28, weight: .light))
+//                        .foregroundColor(.white)
+//                }
             }
             .padding(.horizontal, 25)
         }
@@ -37,7 +37,7 @@ struct SubheaderView: View {
 
 struct SubheaderView_Previews: PreviewProvider {
     static var previews: some View {
-        SubheaderView(title: "Home", goToHome: true)
+        SubheaderView(title: "Home")
             .previewLayout(.sizeThatFits)
     }
 }

@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct FooterView: View {
+
+    @StateObject var gD = GlobalData()
+
     var body: some View {
         ZStack {
+            
             HStack {
                 Text("🟣 PARCE QUE ICI C’EST CHERBOURG !".uppercased())
                     .font(.system(size: 14))
@@ -20,12 +24,14 @@ struct FooterView: View {
 
                 Spacer()
                 
-                Link(destination: URL(string: "https://instagram.com/js_cherbourg")!) {
-                    Image("icon-instagram")
-                        .font(.largeTitle)
-                }
+//                Link(destination: URL(string: "https://instagram.com/js_cherbourg")!) {
+//                    Image("icon-instagram")
+//                        .font(.largeTitle)
+//                }
             }
             .padding(.horizontal, 25)
+            .padding(.bottom, gD.heightTabBar + 15.0)
+
         }
         .background(Color("primaryColor"))
     }

@@ -11,7 +11,11 @@ import SwiftUI
 struct Sport_Club_B3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
+}
+
+class GlobalData: ObservableObject {
+    @Published var heightTabBar = 50.0
 }

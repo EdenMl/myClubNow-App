@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2405B1E22860FB2E00FD7467 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405B1E12860FB2E00FD7467 /* MainView.swift */; };
+		2405B1E42860FCCD00FD7467 /* AllNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405B1E32860FCCD00FD7467 /* AllNewsView.swift */; };
+		2405B1E72861021300FD7467 /* TabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 2405B1E62861021300FD7467 /* TabBar */; };
+		2405B1E928610FD300FD7467 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2405B1E828610FD300FD7467 /* ProfilView.swift */; };
 		2408AACD2833BBCE005822AA /* Sport_Club_B3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408AACC2833BBCE005822AA /* Sport_Club_B3App.swift */; };
 		2408AACF2833BBCE005822AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2408AACE2833BBCE005822AA /* ContentView.swift */; };
 		2408AAD12833BBCF005822AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2408AAD02833BBCF005822AA /* Assets.xcassets */; };
@@ -18,6 +22,8 @@
 		24150552285081B9007124F9 /* CardNewsMinify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24150551285081B9007124F9 /* CardNewsMinify.swift */; };
 		2415055428509CC1007124F9 /* SquarePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2415055328509CC1007124F9 /* SquarePicture.swift */; };
 		241505562850A033007124F9 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241505552850A033007124F9 /* Chip.swift */; };
+		241505932850D52F007124F9 /* NewsPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241505922850D52F007124F9 /* NewsPageView.swift */; };
+		241505952850E2F6007124F9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241505942850E2F6007124F9 /* News.swift */; };
 		2432303628340772003F044E /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2432303528340772003F044E /* SplashScreenView.swift */; };
 		2477C54C284F7E2800AC0610 /* CardMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477C54B284F7E2800AC0610 /* CardMatchView.swift */; };
 		2477C54E284F927300AC0610 /* InformationMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477C54D284F927300AC0610 /* InformationMatchView.swift */; };
@@ -51,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2405B1E12860FB2E00FD7467 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2405B1E32860FCCD00FD7467 /* AllNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsView.swift; sourceTree = "<group>"; };
+		2405B1E828610FD300FD7467 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		2408AAC92833BBCE005822AA /* Sport-Club-B3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sport-Club-B3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2408AACC2833BBCE005822AA /* Sport_Club_B3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport_Club_B3App.swift; sourceTree = "<group>"; };
 		2408AACE2833BBCE005822AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +74,8 @@
 		24150551285081B9007124F9 /* CardNewsMinify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNewsMinify.swift; sourceTree = "<group>"; };
 		2415055328509CC1007124F9 /* SquarePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquarePicture.swift; sourceTree = "<group>"; };
 		241505552850A033007124F9 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		241505922850D52F007124F9 /* NewsPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageView.swift; sourceTree = "<group>"; };
+		241505942850E2F6007124F9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		2432303528340772003F044E /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		2477C54B284F7E2800AC0610 /* CardMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMatchView.swift; sourceTree = "<group>"; };
 		2477C54D284F927300AC0610 /* InformationMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMatchView.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2405B1E72861021300FD7467 /* TabBar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,14 +144,18 @@
 				241505572850C049007124F9 /* models */,
 				24A0A4DE283515A30043BF1E /* blocks */,
 				24A0A4EB28353C690043BF1E /* elements */,
+				2405B1E12860FB2E00FD7467 /* MainView.swift */,
 				2408AACE2833BBCE005822AA /* ContentView.swift */,
+				2405B1E32860FCCD00FD7467 /* AllNewsView.swift */,
 				24A0A49A2834E5280043BF1E /* LoginView.swift */,
 				24A0A4D22834E8130043BF1E /* RegistrationView.swift */,
 				24A0A4982834E33E0043BF1E /* HomeView.swift */,
+				241505922850D52F007124F9 /* NewsPageView.swift */,
 				24A0A4D52834EB350043BF1E /* LaunchScreen.storyboard */,
 				24A0A4D42834EAA80043BF1E /* tmp */,
 				2408AAD02833BBCF005822AA /* Assets.xcassets */,
 				2408AAD22833BBCF005822AA /* Preview Content */,
+				2405B1E828610FD300FD7467 /* ProfilView.swift */,
 			);
 			path = "Sport-Club-B3";
 			sourceTree = "<group>";
@@ -172,6 +188,7 @@
 		241505572850C049007124F9 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				241505942850E2F6007124F9 /* News.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -226,6 +243,9 @@
 			dependencies = (
 			);
 			name = "Sport-Club-B3";
+			packageProductDependencies = (
+				2405B1E62861021300FD7467 /* TabBar */,
+			);
 			productName = "Sport-Club-B3";
 			productReference = 2408AAC92833BBCE005822AA /* Sport-Club-B3.app */;
 			productType = "com.apple.product-type.application";
@@ -298,6 +318,9 @@
 				Base,
 			);
 			mainGroup = 2408AAC02833BBCE005822AA;
+			packageReferences = (
+				2405B1E52861021300FD7467 /* XCRemoteSwiftPackageReference "TabBar" */,
+			);
 			productRefGroup = 2408AACA2833BBCE005822AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,10 +365,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2408AACF2833BBCE005822AA /* ContentView.swift in Sources */,
+				2405B1E22860FB2E00FD7467 /* MainView.swift in Sources */,
 				24A0A4EA28353BFB0043BF1E /* RecapTeamView.swift in Sources */,
 				24150552285081B9007124F9 /* CardNewsMinify.swift in Sources */,
 				2477C54C284F7E2800AC0610 /* CardMatchView.swift in Sources */,
 				24A0A4E22835191F0043BF1E /* FooterView.swift in Sources */,
+				2405B1E928610FD300FD7467 /* ProfilView.swift in Sources */,
 				24A0A4E6283530AA0043BF1E /* CTAShopView.swift in Sources */,
 				24A0A4992834E33E0043BF1E /* HomeView.swift in Sources */,
 				2408AACD2833BBCE005822AA /* Sport_Club_B3App.swift in Sources */,
@@ -357,7 +382,10 @@
 				241505562850A033007124F9 /* Chip.swift in Sources */,
 				2415055428509CC1007124F9 /* SquarePicture.swift in Sources */,
 				241505502850810E007124F9 /* ContentLastNews.swift in Sources */,
+				2405B1E42860FCCD00FD7467 /* AllNewsView.swift in Sources */,
+				241505932850D52F007124F9 /* NewsPageView.swift in Sources */,
 				2432303628340772003F044E /* SplashScreenView.swift in Sources */,
+				241505952850E2F6007124F9 /* News.swift in Sources */,
 				24A0A4E42835228F0043BF1E /* SubheaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,6 +715,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2405B1E52861021300FD7467 /* XCRemoteSwiftPackageReference "TabBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onl1ner/TabBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2405B1E62861021300FD7467 /* TabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2405B1E52861021300FD7467 /* XCRemoteSwiftPackageReference "TabBar" */;
+			productName = TabBar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2408AAC12833BBCE005822AA /* Project object */;
 }
