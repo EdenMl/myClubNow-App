@@ -48,19 +48,6 @@ struct MainView: View {
         }
         .tabBar(style: CustomTabBarStyle())
         .tabItem(style: CustomTabItemStyle())
-        
-        
-        //        TabView {
-        //            ContentView()
-        //                .tabItem {
-        //                    Label("Accueil", systemImage: "house.fill")
-        //                }
-        //
-        //            AllNewsView()
-        //                .tabItem {
-        //                    Label("Actualités", systemImage: "newspaper.fill")
-        //                }
-        //        }
     }
 }
 

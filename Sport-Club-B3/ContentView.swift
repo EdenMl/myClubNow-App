@@ -51,6 +51,7 @@ struct ContentView: View {
                 }
             }
             // .ignoresSafeArea()
+            .navigationBarHidden(true)
             .padding(0)
         }
     }

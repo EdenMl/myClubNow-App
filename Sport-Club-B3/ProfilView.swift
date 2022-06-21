@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfilView: View {
     @StateObject var gD = GlobalData()
+    @EnvironmentObject var vm: UserStateViewModel
 
     var body: some View {
         ZStack {
@@ -21,26 +22,33 @@ struct ProfilView: View {
                     SubheaderView(title: "Profil")
                     
                     VStack(alignment: .center, spacing: 0) {
-                        Button("Se déconnecter") {
-                            print("CLIC LOGOUT")
-                        }
-                            .font(.system(size: 12))
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 25)
-                            .textCase(.uppercase)
-                            .scaledToFill()
-                            .minimumScaleFactor(0.5)
-                            .lineLimit(1)
+                        Text("Hello ")
                             .foregroundColor(.white)
-                            .background(Color.black)
-                            .cornerRadius(4)
+                        Button(action: {
+                            Task {
+                                vm.authLogOut()
+                                print("CLIC LOGOUT")
+                            }
+                        }) {
+                            Text("Se déconnecter")
+                        }
+                        .font(.system(size: 12))
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 25)
+                        .textCase(.uppercase)
+                        .scaledToFill()
+                        .minimumScaleFactor(0.5)
+                        .lineLimit(1)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(4)
                     }
                     .padding()
                     .padding(.bottom, gD.heightTabBar + 20.0)
                 }
                 
             }
-
+            .navigationBarHidden(true)
         }
     }
 }

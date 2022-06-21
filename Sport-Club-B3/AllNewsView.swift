@@ -33,6 +33,7 @@ struct AllNewsView: View {
                 }
                 
             }
+            .navigationBarHidden(true)
     //        NavigationView {
     //            List {
     //                Section {

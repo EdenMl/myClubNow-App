@@ -37,6 +37,7 @@
 		24A0A4E828353BB90043BF1E /* RoundedPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4E728353BB90043BF1E /* RoundedPicture.swift */; };
 		24A0A4EA28353BFB0043BF1E /* RecapTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4E928353BFB0043BF1E /* RecapTeamView.swift */; };
 		24A0A4ED2835407E0043BF1E /* LogoLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4EC2835407E0043BF1E /* LogoLeagueView.swift */; };
+		24CA5B3E2861E74F00500517 /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		24A0A4E728353BB90043BF1E /* RoundedPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedPicture.swift; sourceTree = "<group>"; };
 		24A0A4E928353BFB0043BF1E /* RecapTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapTeamView.swift; sourceTree = "<group>"; };
 		24A0A4EC2835407E0043BF1E /* LogoLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLeagueView.swift; sourceTree = "<group>"; };
+		24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,12 +152,13 @@
 				24A0A49A2834E5280043BF1E /* LoginView.swift */,
 				24A0A4D22834E8130043BF1E /* RegistrationView.swift */,
 				24A0A4982834E33E0043BF1E /* HomeView.swift */,
+				2405B1E828610FD300FD7467 /* ProfilView.swift */,
 				241505922850D52F007124F9 /* NewsPageView.swift */,
 				24A0A4D52834EB350043BF1E /* LaunchScreen.storyboard */,
+				24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */,
 				24A0A4D42834EAA80043BF1E /* tmp */,
 				2408AAD02833BBCF005822AA /* Assets.xcassets */,
 				2408AAD22833BBCF005822AA /* Preview Content */,
-				2405B1E828610FD300FD7467 /* ProfilView.swift */,
 			);
 			path = "Sport-Club-B3";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				24A0A49B2834E5280043BF1E /* LoginView.swift in Sources */,
 				24A0A4E828353BB90043BF1E /* RoundedPicture.swift in Sources */,
 				2477C54E284F927300AC0610 /* InformationMatchView.swift in Sources */,
+				24CA5B3E2861E74F00500517 /* UserStateViewModel.swift in Sources */,
 				241505562850A033007124F9 /* Chip.swift in Sources */,
 				2415055428509CC1007124F9 /* SquarePicture.swift in Sources */,
 				241505502850810E007124F9 /* ContentLastNews.swift in Sources */,
@@ -549,6 +553,7 @@
 				DEVELOPMENT_TEAM = NX8989P32P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -580,6 +585,7 @@
 				DEVELOPMENT_TEAM = NX8989P32P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
