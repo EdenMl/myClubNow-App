@@ -26,11 +26,6 @@ struct Sport_Club_B3App: App {
             .environmentObject(userStateViewModel)
         }
     }
-//    var body: some Scene {
-//        WindowGroup {
-//            MainView()
-//        }
-//    }
 }
 
 struct ApplicationSwitcher: View {
@@ -43,6 +38,5 @@ struct ApplicationSwitcher: View {
         } else {
             LoginView()
         }
-        
     }
 }

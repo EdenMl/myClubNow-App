@@ -38,6 +38,7 @@
 		24A0A4EA28353BFB0043BF1E /* RecapTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4E928353BFB0043BF1E /* RecapTeamView.swift */; };
 		24A0A4ED2835407E0043BF1E /* LogoLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4EC2835407E0043BF1E /* LogoLeagueView.swift */; };
 		24CA5B3E2861E74F00500517 /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */; };
+		24CA5B4028621C3100500517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA5B3F28621C3100500517 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		24A0A4E928353BFB0043BF1E /* RecapTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapTeamView.swift; sourceTree = "<group>"; };
 		24A0A4EC2835407E0043BF1E /* LogoLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLeagueView.swift; sourceTree = "<group>"; };
 		24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
+		24CA5B3F28621C3100500517 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				241505942850E2F6007124F9 /* News.swift */,
+				24CA5B3F28621C3100500517 /* User.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				2408AACF2833BBCE005822AA /* ContentView.swift in Sources */,
 				2405B1E22860FB2E00FD7467 /* MainView.swift in Sources */,
 				24A0A4EA28353BFB0043BF1E /* RecapTeamView.swift in Sources */,
+				24CA5B4028621C3100500517 /* User.swift in Sources */,
 				24150552285081B9007124F9 /* CardNewsMinify.swift in Sources */,
 				2477C54C284F7E2800AC0610 /* CardMatchView.swift in Sources */,
 				24A0A4E22835191F0043BF1E /* FooterView.swift in Sources */,

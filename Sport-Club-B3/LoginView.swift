@@ -4,21 +4,19 @@ import LocalAuthentication
 struct LoginView: View {
     
     @EnvironmentObject var vm: UserStateViewModel
-    @State private var email = ""
-    @State private var password = ""
-    @State private var wrongUsername = 0
-    @State private var wrongPassword = 0
+    @State private var email = "emalo@wevox.eu"
+    @State private var password = "azerty123"
     
     fileprivate func EmailInput() -> some View {
         TextField("Email", text: $email)
             .padding()
             .frame(maxWidth: .infinity)
             .frame(height: 50)
-            .border(.red, width: CGFloat(wrongUsername))
+            .border(.red, width: CGFloat(vm.invalid ? 2 : 0))
             .preferredColorScheme(.light)
             .background(Color.black.opacity(0.05))
-            .keyboardType(.emailAddress)
             .disableAutocorrection(true)
+            .keyboardType(.emailAddress)
             .autocapitalization(.none)
     }
     
@@ -28,7 +26,7 @@ struct LoginView: View {
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             .cornerRadius(10)
-            .border(.red, width: CGFloat(wrongPassword))
+            .border(.red, width: CGFloat(vm.invalid ? 2 : 0))
             .preferredColorScheme(.light)
             .background(Color.black.opacity(0.05))
     }
@@ -36,7 +34,7 @@ struct LoginView: View {
     fileprivate func LoginButton() -> some View {
         Button(action: {
             Task {
-                vm.authSignIn()
+                vm.authSignIn(email: email, password: password)
             }
         }) {
             Text("Se connecter")
@@ -92,6 +90,14 @@ struct LoginView: View {
                         FaceIDButton()
                     }
                     .padding(.vertical)
+                    
+                    Text("Mauvais couple identifiant/mot de passe, veuillez réssayer !")
+                        .font(.footnote)
+                        .foregroundColor(.red)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .opacity(vm.invalid ? 1 : 0)
+                    
                 }
                 .padding(.horizontal, 30)
             }

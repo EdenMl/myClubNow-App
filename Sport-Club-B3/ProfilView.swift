@@ -22,7 +22,7 @@ struct ProfilView: View {
                     SubheaderView(title: "Profil")
                     
                     VStack(alignment: .center, spacing: 0) {
-                        Text("Hello ")
+                        Text("Hello \(vm.me.email.uppercased()) !")
                             .foregroundColor(.white)
                         Button(action: {
                             Task {

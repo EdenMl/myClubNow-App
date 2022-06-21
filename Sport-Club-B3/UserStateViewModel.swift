@@ -18,38 +18,37 @@ class UserStateViewModel: ObservableObject {
     @AppStorage("AUTH_KEY") var isLoggedIn = false {
         willSet { objectWillChange.send() }
     }
-    @AppStorage("USER_KEY") var username = "eden" // TMP
-    @Published var password = "eden" // TMP
-    @Published var invalid: Bool = false
+    @Published var me = User(email: "emalo@wevox.eu", password: "azerty123", number: 30)
 
-    private var sampleUser = "eden"
-    private var samplePassword = "eden"
+    // @AppStorage("USER_KEY") var email = "eden" // TMP
+    // @Published var password = "eden" // TMP
+
+    @Published var invalid: Bool = false
     
     init() {
         print("Correctly logged on: \(isLoggedIn)")
-        print("Current user: \(username)")
+        print("Current user: \(me.email)")
     }
-
-    @State var wrongUsername = 0
-    @State var wrongPassword = 0
     
     func authToggle() {
-        self.password = ""
+        self.me.password = ""
         withAnimation {
             isLoggedIn.toggle()
         }
     }
     
-    func authSignIn() {
-        guard self.username == sampleUser else {
+    func authSignIn(email: String, password: String) {
+        guard self.me.email == email else {
             self.invalid = true
             return
         }
         
-        guard self.password == samplePassword else {
+        guard self.me.password == password else {
             self.invalid = true
             return
         }
+        
+        me = User(email: email, password: password, number: 3)
         
         authToggle()
     }
