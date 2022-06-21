@@ -19,29 +19,91 @@ struct ProfilView: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 0) {
                     ///- BARRE DU HAUT
-                    SubheaderView(title: "Profil")
+                    // SubheaderView(title: "Profil")
                     
-                    VStack(alignment: .center, spacing: 0) {
-                        Text("Hello \(vm.me.email.uppercased()) !")
+                    VStack {
+                        Text("Bonjour \(vm.me.firstname.uppercased()) !")
+                            .font(.title)
+                            .fontWeight(.heavy)
                             .foregroundColor(.white)
-                        Button(action: {
-                            Task {
-                                vm.authLogOut()
-                                print("CLIC LOGOUT")
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom)
+                        
+                        VStack {
+                            Section() {
+                                HStack {
+                                    Text("Identité")
+                                        .fontWeight(.medium)
+                                    Spacer()
+                                    Text("\(vm.me.firstname.capitalized) \(vm.me.lastname?.uppercased() ?? "")")
+                                }
                             }
-                        }) {
-                            Text("Se déconnecter")
+                            .padding()
+                            .background(Color("bgColor"))
+                            
+                            Section() {
+                                HStack {
+                                    Text("Rôle")
+                                        .fontWeight(.medium)
+                                    Spacer()
+                                    Text(vm.me.displayRole().capitalized)
+                                }
+                            }
+                            .padding()
+                            .background(Color("bgColor"))
+                            
+                            Section() {
+                                HStack {
+                                    Text("Anniversaire")
+                                        .fontWeight(.medium)
+                                    Spacer()
+                                    if vm.me.birthday != nil {
+                                        Text(vm.me.birthday!, style: .date)
+                                    } else {
+                                        Text("NaN")
+                                    }
+                                }
+                            }
+                            .padding()
+                            .background(Color("bgColor"))
+                            
+                            Section() {
+                                HStack {
+                                    Text("Création du compte")
+                                        .fontWeight(.medium)
+                                    Spacer()
+                                    if vm.me.dateAdd != nil {
+                                        Text(vm.me.dateAdd!, style: .date)
+                                    } else {
+                                        Text("NaN")
+                                    }
+                                }
+                            }
+                            .padding()
+                            .background(Color("bgColor"))
+                            
+                            Section {
+                                Button(action: {
+                                    Task {
+                                        vm.authLogOut()
+                                    }
+                                }) {
+                                    Text("Se déconnecter")
+                                }
+                                .frame(maxWidth: .infinity)
+                                .font(.system(size: 12))
+                                .padding(.vertical, 10)
+                                .padding(.horizontal, 25)
+                                .textCase(.uppercase)
+                                .scaledToFill()
+                                .minimumScaleFactor(0.5)
+                                .lineLimit(1)
+                                .foregroundColor(.white)
+                                .background(Color.black)
+                                .cornerRadius(4)
+                            }
+                            .padding(.vertical)
                         }
-                        .font(.system(size: 12))
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 25)
-                        .textCase(.uppercase)
-                        .scaledToFill()
-                        .minimumScaleFactor(0.5)
-                        .lineLimit(1)
-                        .foregroundColor(.white)
-                        .background(Color.black)
-                        .cornerRadius(4)
                     }
                     .padding()
                     .padding(.bottom, gD.heightTabBar + 20.0)

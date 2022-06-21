@@ -18,7 +18,8 @@ class UserStateViewModel: ObservableObject {
     @AppStorage("AUTH_KEY") var isLoggedIn = false {
         willSet { objectWillChange.send() }
     }
-    @Published var me = User(email: "emalo@wevox.eu", password: "azerty123", number: 30)
+    // TMP
+    @Published var me = User(email: "emalo@wevox.eu", password: "azerty123", firstname: "Eden", role: 10)
 
     // @AppStorage("USER_KEY") var email = "eden" // TMP
     // @Published var password = "eden" // TMP
@@ -48,7 +49,8 @@ class UserStateViewModel: ObservableObject {
             return
         }
         
-        me = User(email: email, password: password, number: 3)
+        // APPEL API
+        me = User(email: email, password: password, firstname: "Eden", role: 10)
         
         authToggle()
     }
@@ -67,7 +69,7 @@ class UserStateViewModel: ObservableObject {
                     self.isLoggedIn.toggle()
                 } else {
                     // There was a problem
-                    let _ = print("Error during authentication")
+                    print("Error during authentication")
                 }
             }
         } else {
@@ -77,6 +79,7 @@ class UserStateViewModel: ObservableObject {
     }
             
     func authLogOut() {
+        self.invalid = false
         isLoggedIn = false
     }
             
@@ -84,6 +87,15 @@ class UserStateViewModel: ObservableObject {
         print("Button Pressed")
     }
 }
+
+
+//func getDate(dateString: String) -> Date? {
+//    let dateFormatter = DateFormatter()
+//    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+//    dateFormatter.timeZone = TimeZone.current
+//    dateFormatter.locale = Locale.current
+//    return dateFormatter.date(from: dateString)
+//}
 
 
 
