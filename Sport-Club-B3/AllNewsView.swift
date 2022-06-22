@@ -10,6 +10,7 @@ import SwiftUI
 struct AllNewsView: View {
     
     @StateObject var gD = GlobalData()
+    @EnvironmentObject var vm: UserStateViewModel
 
     var body: some View {
         ZStack {
@@ -26,7 +27,9 @@ struct AllNewsView: View {
                         if gD.allNews.count > 0 {
                             VStack(alignment: .center, spacing: 0) {
                                 ForEach(0 ..< gD.allNews.count, id:\.self) { i in
-                                    CardNewsMinify(news: gD.allNews[i] as! News)
+                                    if (gD.allNews[i].acceptedRole <= vm.me.role) {
+                                        CardNewsMinify(news: gD.allNews[i])
+                                    }
                                 }
                             }
                             .padding()
@@ -44,31 +47,11 @@ struct AllNewsView: View {
                 
             }
             .navigationBarHidden(true)
-    //        NavigationView {
-    //            List {
-    //                Section {
-    //                    HStack {
-    //                        Text("Hello")
-    //                        Spacer()
-    //                        Text("Hello World")
-    //                    }
-    //
-    //                    HStack {
-    //                        Text("Hello")
-    //                        Spacer()
-    //                        Text("Hello World")
-    //                    }
-    //
-    //                    HStack {
-    //                        Text("Hello")
-    //                        Spacer()
-    //                        Text("Hello World")
-    //                    }
-    //
-    //                }
-    //            }
-    //        }
-            
+//            .onAppear {
+//                Api().getAllNews{ (news) in
+//                    gD.allNews.append(contentsOf: news)
+//                }
+//            }
         }
     }
 }

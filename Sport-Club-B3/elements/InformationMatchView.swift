@@ -7,12 +7,11 @@
 
 import SwiftUI
 
+
 struct InformationMatchView: View {
     var match: Match
 
     @Environment(\.openURL) var openURL
-
-    let dateFormatter: DateFormatter = DateFormatter()
     
 //    let winner: Int
 //    if match.pointsHomeTeam == match.pointsOutsideTeam {
@@ -31,25 +30,27 @@ struct InformationMatchView: View {
 //    }
 
     var body: some View {
-
         VStack {
             VStack {
                 Text(match.dateStart, format: Date.FormatStyle().month().day().weekday())
                     .bold()
-                
+                    .environment(\.locale, .init(identifier: "fr_FR"))
+
                 Text(match.dateStart, format: Date.FormatStyle().hour().minute())
                     .bold()
+                    .environment(\.locale, .init(identifier: "fr_FR"))
             }
             .textCase(.uppercase)
             .foregroundColor(Color("primaryColor"))
             .padding(.bottom, 8)
             
             Text(match.location)
-                .padding(.bottom, 12)
                 .font(.footnote)
-                .frame(alignment: .center)
-                .multilineTextAlignment(.center)
                 .lineLimit(3)
+                .frame(alignment: .center)
+                .frame(maxWidth: .infinity)
+                .frame(height: 40)
+                .multilineTextAlignment(.center)
             
             if match.pointsHomeTeam != 0 && match.pointsOutsideTeam != 0 {
                 Text("\(String(match.pointsHomeTeam)) - \(String(match.pointsOutsideTeam))")
@@ -58,7 +59,7 @@ struct InformationMatchView: View {
                     .foregroundColor(Color("primaryColor"))
             } else {
                 Button("Billetterie") {
-                    openURL(URL(string: "https://store.jscherbourg.fr/catalogs/D6826854-AC16-4B61-A399-DA6A2ED6C740")!)
+                    openURL(match.linkTicketOffice ?? URL(string: "https://store.jscherbourg.fr/catalogs/D6826854-AC16-4B61-A399-DA6A2ED6C740")!)
                 }
                     .font(.system(size: 12))
                     .padding(.vertical, 5)

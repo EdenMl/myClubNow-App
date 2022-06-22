@@ -32,7 +32,7 @@ struct CardMatchView: View {
 //                    )
 //                    .padding()
                     
-                    if Int(gD.allSettings[0].result) == match.home.id {
+                    if Int(gD.allSetting[0].result) == match.home.id {
                         // TMP
                         RoundedPicture(
                             imageUrl: "logo",
@@ -69,7 +69,7 @@ struct CardMatchView: View {
 //                    )
 //                    .padding()
                     
-                    if Int(gD.allSettings[0].result) == match.outside.id {
+                    if Int(gD.allSetting[0].result) == match.outside.id {
                         // TMP
                         RoundedPicture(
                             imageUrl: "logo",

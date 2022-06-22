@@ -28,10 +28,12 @@
 		2458A6452862EF12009B7B23 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A6442862EF12009B7B23 /* Match.swift */; };
 		2458A6472862EFC2009B7B23 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A6462862EFC2009B7B23 /* Team.swift */; };
 		2458A6492862F043009B7B23 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A6482862F043009B7B23 /* League.swift */; };
-		2458A64B2862F8B9009B7B23 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A64A2862F8B9009B7B23 /* Settings.swift */; };
+		2458A64B2862F8B9009B7B23 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A64A2862F8B9009B7B23 /* Setting.swift */; };
+		2458A64D286311DF009B7B23 /* OneNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A64C286311DF009B7B23 /* OneNewsView.swift */; };
+		2458A650286314A5009B7B23 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2458A64F286314A5009B7B23 /* SDWebImageSwiftUI */; };
+		2458A6522863160D009B7B23 /* SquareWebPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458A6512863160D009B7B23 /* SquareWebPicture.swift */; };
 		2477C54C284F7E2800AC0610 /* CardMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477C54B284F7E2800AC0610 /* CardMatchView.swift */; };
 		2477C54E284F927300AC0610 /* InformationMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2477C54D284F927300AC0610 /* InformationMatchView.swift */; };
-		24A0A4992834E33E0043BF1E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4982834E33E0043BF1E /* HomeView.swift */; };
 		24A0A49B2834E5280043BF1E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A49A2834E5280043BF1E /* LoginView.swift */; };
 		24A0A4D32834E8130043BF1E /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4D22834E8130043BF1E /* RegistrationView.swift */; };
 		24A0A4D62834EB350043BF1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0A4D52834EB350043BF1E /* LaunchScreen.storyboard */; };
@@ -41,6 +43,7 @@
 		24A0A4E828353BB90043BF1E /* RoundedPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4E728353BB90043BF1E /* RoundedPicture.swift */; };
 		24A0A4EA28353BFB0043BF1E /* RecapTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4E928353BFB0043BF1E /* RecapTeamView.swift */; };
 		24A0A4ED2835407E0043BF1E /* LogoLeagueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0A4EC2835407E0043BF1E /* LogoLeagueView.swift */; };
+		24B72EAA286389CB000C5C9A /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B72EA9286389CB000C5C9A /* Datas.swift */; };
 		24CA5B3E2861E74F00500517 /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */; };
 		24CA5B4028621C3100500517 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CA5B3F28621C3100500517 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +69,7 @@
 		2405B1E12860FB2E00FD7467 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2405B1E32860FCCD00FD7467 /* AllNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNewsView.swift; sourceTree = "<group>"; };
 		2405B1E828610FD300FD7467 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
-		2408AAC92833BBCE005822AA /* Sport-Club-B3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sport-Club-B3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2408AAC92833BBCE005822AA /* JS Cherbourg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JS Cherbourg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2408AACC2833BBCE005822AA /* Sport_Club_B3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport_Club_B3App.swift; sourceTree = "<group>"; };
 		2408AACE2833BBCE005822AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2408AAD02833BBCF005822AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,10 +89,11 @@
 		2458A6442862EF12009B7B23 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		2458A6462862EFC2009B7B23 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		2458A6482862F043009B7B23 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
-		2458A64A2862F8B9009B7B23 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		2458A64A2862F8B9009B7B23 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		2458A64C286311DF009B7B23 /* OneNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsView.swift; sourceTree = "<group>"; };
+		2458A6512863160D009B7B23 /* SquareWebPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareWebPicture.swift; sourceTree = "<group>"; };
 		2477C54B284F7E2800AC0610 /* CardMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMatchView.swift; sourceTree = "<group>"; };
 		2477C54D284F927300AC0610 /* InformationMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMatchView.swift; sourceTree = "<group>"; };
-		24A0A4982834E33E0043BF1E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		24A0A49A2834E5280043BF1E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		24A0A4D22834E8130043BF1E /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		24A0A4D52834EB350043BF1E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		24A0A4E728353BB90043BF1E /* RoundedPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedPicture.swift; sourceTree = "<group>"; };
 		24A0A4E928353BFB0043BF1E /* RecapTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapTeamView.swift; sourceTree = "<group>"; };
 		24A0A4EC2835407E0043BF1E /* LogoLeagueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoLeagueView.swift; sourceTree = "<group>"; };
+		24B72EA9286389CB000C5C9A /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
 		24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
 		24CA5B3F28621C3100500517 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2458A650286314A5009B7B23 /* SDWebImageSwiftUI in Frameworks */,
 				2405B1E72861021300FD7467 /* TabBar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,7 +148,7 @@
 		2408AACA2833BBCE005822AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2408AAC92833BBCE005822AA /* Sport-Club-B3.app */,
+				2408AAC92833BBCE005822AA /* JS Cherbourg.app */,
 				2408AAD92833BBCF005822AA /* Sport-Club-B3Tests.xctest */,
 				2408AAE32833BBCF005822AA /* Sport-Club-B3UITests.xctest */,
 			);
@@ -153,22 +159,22 @@
 			isa = PBXGroup;
 			children = (
 				2408AACC2833BBCE005822AA /* Sport_Club_B3App.swift */,
+				24B72EA9286389CB000C5C9A /* Datas.swift */,
 				241505572850C049007124F9 /* models */,
 				24A0A4DE283515A30043BF1E /* blocks */,
 				24A0A4EB28353C690043BF1E /* elements */,
+				24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */,
 				2405B1E12860FB2E00FD7467 /* MainView.swift */,
+				24A0A49A2834E5280043BF1E /* LoginView.swift */,
 				2408AACE2833BBCE005822AA /* ContentView.swift */,
 				2405B1E32860FCCD00FD7467 /* AllNewsView.swift */,
-				24A0A49A2834E5280043BF1E /* LoginView.swift */,
-				24A0A4D22834E8130043BF1E /* RegistrationView.swift */,
-				24A0A4982834E33E0043BF1E /* HomeView.swift */,
-				2405B1E828610FD300FD7467 /* ProfilView.swift */,
 				241505922850D52F007124F9 /* NewsPageView.swift */,
+				2405B1E828610FD300FD7467 /* ProfilView.swift */,
 				24A0A4D52834EB350043BF1E /* LaunchScreen.storyboard */,
-				24CA5B3D2861E74F00500517 /* UserStateViewModel.swift */,
 				24A0A4D42834EAA80043BF1E /* tmp */,
 				2408AAD02833BBCF005822AA /* Assets.xcassets */,
 				2408AAD22833BBCF005822AA /* Preview Content */,
+				2458A64C286311DF009B7B23 /* OneNewsView.swift */,
 			);
 			path = "Sport-Club-B3";
 			sourceTree = "<group>";
@@ -206,7 +212,7 @@
 				2458A6442862EF12009B7B23 /* Match.swift */,
 				2458A6462862EFC2009B7B23 /* Team.swift */,
 				2458A6482862F043009B7B23 /* League.swift */,
-				2458A64A2862F8B9009B7B23 /* Settings.swift */,
+				2458A64A2862F8B9009B7B23 /* Setting.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 		24A0A4D42834EAA80043BF1E /* tmp */ = {
 			isa = PBXGroup;
 			children = (
+				24A0A4D22834E8130043BF1E /* RegistrationView.swift */,
 				24A0A4E12835191F0043BF1E /* FooterView.swift */,
 				2432303528340772003F044E /* SplashScreenView.swift */,
 			);
@@ -240,6 +247,7 @@
 				2477C54D284F927300AC0610 /* InformationMatchView.swift */,
 				24150551285081B9007124F9 /* CardNewsMinify.swift */,
 				2415055328509CC1007124F9 /* SquarePicture.swift */,
+				2458A6512863160D009B7B23 /* SquareWebPicture.swift */,
 				241505552850A033007124F9 /* Chip.swift */,
 			);
 			path = elements;
@@ -263,9 +271,10 @@
 			name = "Sport-Club-B3";
 			packageProductDependencies = (
 				2405B1E62861021300FD7467 /* TabBar */,
+				2458A64F286314A5009B7B23 /* SDWebImageSwiftUI */,
 			);
 			productName = "Sport-Club-B3";
-			productReference = 2408AAC92833BBCE005822AA /* Sport-Club-B3.app */;
+			productReference = 2408AAC92833BBCE005822AA /* JS Cherbourg.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2408AAD82833BBCF005822AA /* Sport-Club-B3Tests */ = {
@@ -338,6 +347,7 @@
 			mainGroup = 2408AAC02833BBCE005822AA;
 			packageReferences = (
 				2405B1E52861021300FD7467 /* XCRemoteSwiftPackageReference "TabBar" */,
+				2458A64E286314A5009B7B23 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 2408AACA2833BBCE005822AA /* Products */;
 			projectDirPath = "";
@@ -382,7 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2458A64B2862F8B9009B7B23 /* Settings.swift in Sources */,
+				2458A64B2862F8B9009B7B23 /* Setting.swift in Sources */,
 				2408AACF2833BBCE005822AA /* ContentView.swift in Sources */,
 				2405B1E22860FB2E00FD7467 /* MainView.swift in Sources */,
 				24A0A4EA28353BFB0043BF1E /* RecapTeamView.swift in Sources */,
@@ -393,7 +403,6 @@
 				2405B1E928610FD300FD7467 /* ProfilView.swift in Sources */,
 				24A0A4E6283530AA0043BF1E /* CTAShopView.swift in Sources */,
 				2458A6452862EF12009B7B23 /* Match.swift in Sources */,
-				24A0A4992834E33E0043BF1E /* HomeView.swift in Sources */,
 				2408AACD2833BBCE005822AA /* Sport_Club_B3App.swift in Sources */,
 				24A0A4ED2835407E0043BF1E /* LogoLeagueView.swift in Sources */,
 				24A0A4D32834E8130043BF1E /* RegistrationView.swift in Sources */,
@@ -401,12 +410,15 @@
 				24A0A49B2834E5280043BF1E /* LoginView.swift in Sources */,
 				24A0A4E828353BB90043BF1E /* RoundedPicture.swift in Sources */,
 				2477C54E284F927300AC0610 /* InformationMatchView.swift in Sources */,
+				24B72EAA286389CB000C5C9A /* Datas.swift in Sources */,
 				24CA5B3E2861E74F00500517 /* UserStateViewModel.swift in Sources */,
+				2458A64D286311DF009B7B23 /* OneNewsView.swift in Sources */,
 				2458A6472862EFC2009B7B23 /* Team.swift in Sources */,
 				241505562850A033007124F9 /* Chip.swift in Sources */,
 				2415055428509CC1007124F9 /* SquarePicture.swift in Sources */,
 				241505502850810E007124F9 /* ContentLastNews.swift in Sources */,
 				2405B1E42860FCCD00FD7467 /* AllNewsView.swift in Sources */,
+				2458A6522863160D009B7B23 /* SquareWebPicture.swift in Sources */,
 				241505932850D52F007124F9 /* NewsPageView.swift in Sources */,
 				2432303628340772003F044E /* SplashScreenView.swift in Sources */,
 				241505952850E2F6007124F9 /* News.swift in Sources */,
@@ -584,9 +596,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.edenml.Sport-Club-B3";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.edenml.staging;
+				PRODUCT_NAME = "JS Cherbourg";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,9 +628,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.edenml.Sport-Club-B3";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.4;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.edenml.staging;
+				PRODUCT_NAME = "JS Cherbourg";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,6 +763,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		2458A64E286314A5009B7B23 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -758,6 +778,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2405B1E52861021300FD7467 /* XCRemoteSwiftPackageReference "TabBar" */;
 			productName = TabBar;
+		};
+		2458A64F286314A5009B7B23 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2458A64E286314A5009B7B23 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

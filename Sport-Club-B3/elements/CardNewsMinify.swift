@@ -9,19 +9,23 @@ import SwiftUI
 
 struct CardNewsMinify: View {
     var news: News
+    @State private var isShowingDetailView = false
+
     var body: some View {
         
         VStack {
-            HStack {
-                VStack(alignment: .center, spacing: 0) {
-                    SquarePicture(imageUrl: "img-bg-team", size: 80)
-                        .padding(.bottom, 10)
-                    
-                    if news.acceptedRole > 10 {
-                        Chip(label: news.displayAcceptedRole(), isSolid: true)
+            HStack(alignment: .top) {
+                if (news.pictureUrl != nil) {
+                    VStack(alignment: .center, spacing: 0) {
+                        SquareWebPicture(imageUrl: news.pictureUrl!, size: 80)
+                            .padding(.bottom, 10)
+                        
+    //                    if news.acceptedRole > 10 {
+    //                        Chip(label: news.displayAcceptedRole(), isSolid: true)
+    //                    }
                     }
+                    .frame(width: 80)
                 }
-                .frame(width: 80)
                 
                 VStack(alignment: .leading, spacing: 0) {
                     VStack(alignment: .leading, spacing: 0) {
@@ -31,23 +35,31 @@ struct CardNewsMinify: View {
                             .lineLimit(1)
                         Text(news.content)
                             .font(.footnote)
-                            .lineLimit(3)
+                            .lineLimit(2)
                     }
                     .padding(.bottom, 20)
                     
                     HStack(spacing: 0) {
-                        HStack(spacing: 0) {
-                            Image(systemName: "calendar")
-                                .padding(.trailing, 6)
-                            
-                            Text("Il y a 7 heures")
-                                .lineLimit(1)
-                                .font(.footnote)
-                                .frame(maxWidth: .infinity, alignment: .leading)
+                        if news.acceptedRole > 10 {
+                            Chip(label: news.displayAcceptedRole(), isSolid: true)
                         }
-                                
+//                        HStack(spacing: 0) {
+//                            Image(systemName: "calendar")
+//                                .padding(.trailing, 6)
+//
+//                            Text("Il y a 7 heures")
+//                                .lineLimit(1)
+//                                .font(.footnote)
+//                                .frame(maxWidth: .infinity, alignment: .leading)
+//                        }
+                           
+                        
+                        NavigationLink(destination: OneNewsView(news: news), isActive: $isShowingDetailView) {
+                            EmptyView()
+                        }
+                        
                         Button("Lire") {
-                            
+                            self.isShowingDetailView = true
                         }
                             .font(.system(size: 12))
                             .padding(.vertical, 5)
@@ -60,6 +72,8 @@ struct CardNewsMinify: View {
                             .background(Color.black)
                             .cornerRadius(4)
                             .frame(maxWidth: .infinity, alignment: .trailing)
+                        
+                        
                     }
                     .frame(maxWidth: .infinity)
                     

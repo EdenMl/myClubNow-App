@@ -6,15 +6,25 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct SquareWebPicture: View {
+    var imageUrl: URL
+    var size: CGFloat
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WebImage(url: imageUrl)
+            .renderingMode(.original)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: size, height: size, alignment: .center)
+            .clipShape(Rectangle())
+            .cornerRadius(6)
     }
 }
 
-struct SquareWebPicture_Previews: PreviewProvider {
-    static var previews: some View {
-        SquareWebPicture()
-    }
-}
+//struct SquareWebPicture_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SquarePicture(imageUrl: "img-bg-team", size: 80)
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

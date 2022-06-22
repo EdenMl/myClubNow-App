@@ -12,13 +12,14 @@ struct Match: Hashable, Codable {
     var pointsHomeTeam: Int
     var pointsOutsideTeam: Int
     
-    var dateStart: Date = Date()
+    var dateStart: Date
     var location: String
     var otherInformation: String?
     var numDaysLeague: Int
     
     var highlighted: Bool
     var displayable: Bool
+    var linkTicketOffice: URL?
     var dateAdd: Date?
     var dateUpd: Date?
     

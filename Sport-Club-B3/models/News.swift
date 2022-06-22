@@ -12,7 +12,7 @@ struct News: Hashable, Codable {
     var title: String
     var content: String
     
-    var pictureUrl: String?
+    var pictureUrl: URL?
     var pictureAlt: String?
     var acceptedRole: Int
     
