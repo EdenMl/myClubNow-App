@@ -19,7 +19,7 @@ class UserStateViewModel: ObservableObject {
         willSet { objectWillChange.send() }
     }
     // TMP
-    @Published var me = User(email: "emalo@wevox.eu", password: "azerty123", firstname: "Eden", role: 10)
+    @Published var me = User(id: 1, email: "emalo@wevox.eu", password: "azerty123", firstname: "Eden", role: 10)
 
     // @AppStorage("USER_KEY") var email = "eden" // TMP
     // @Published var password = "eden" // TMP
@@ -50,7 +50,7 @@ class UserStateViewModel: ObservableObject {
         }
         
         // APPEL API
-        me = User(email: email, password: password, firstname: "Eden", role: 10)
+        me = User(id: 1, email: email, password: password, firstname: "Eden", role: 10)
         
         authToggle()
     }

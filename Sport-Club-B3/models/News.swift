@@ -8,6 +8,24 @@
 import SwiftUI
 
 struct News: Hashable, Codable {
-    let name: String
-    let image: String
+    var id: Int
+    var title: String
+    var content: String
+    
+    var pictureUrl: String?
+    var pictureAlt: String?
+    var acceptedRole: Int
+    
+    var active: Bool
+    var dateAdd: Date?
+    var dateUpd: Date?
+    
+    func displayAcceptedRole() -> String {
+        switch self.acceptedRole {
+            case 10: return "visiteur"
+            case 20: return "fans"
+            case 30: return "club"
+            default: return ""
+        }
+    }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @StateObject var gD = GlobalData()
+    
     var body: some View {
         ZStack {
             Color("primaryColor")
@@ -24,15 +27,15 @@ struct ContentView: View {
                         SubheaderView(title: "JS Cherbourg")
                         
                         ///- RÉCAPITULATIF DE L'ÉQUIPE
-                        RecapTeamView()
+                        RecapTeamView(team: gD.allTeam[0])
                         
                         ///- DERNIER MATCH
                         SubheaderView(title: "Dernier Match")
-                        CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
+                        CardMatchView(match: gD.allMatch[0], league: gD.allLeague[0])
 
                         ///- PROCHAIN MATCH
                         SubheaderView(title: "Prochain Match")
-                        CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
+                        CardMatchView(match: gD.allMatch[1], league: gD.allLeague[0])
 
 
                         ///- ACTUALITÉS

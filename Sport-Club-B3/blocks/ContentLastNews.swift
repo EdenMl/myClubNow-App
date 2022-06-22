@@ -10,15 +10,18 @@ import SwiftUI
 
 struct ContentLastNews: View {
     @State var limit = 3
+    
+    @StateObject var gD = GlobalData()
+    
     @State private var isShowingDetailView = false
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
 
             ForEach(0 ..< limit, id:\.self) { i in
-                CardNewsMinify()
+                CardNewsMinify(news: gD.allNews[i])
             }
             
-            NavigationLink(destination: Text("Second View"), isActive: $isShowingDetailView) { EmptyView() }
+            // NavigationLink(destination: AllNewsView(), isActive: $isShowingDetailView) { EmptyView() }
             Button("Toutes les actualités") {
                 print("CLIC")
                 self.isShowingDetailView = true

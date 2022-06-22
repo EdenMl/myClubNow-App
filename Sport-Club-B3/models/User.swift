@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct User: Hashable, Codable {
-    var id: Int?
+    var id: Int
     var email: String
     var password: String
     

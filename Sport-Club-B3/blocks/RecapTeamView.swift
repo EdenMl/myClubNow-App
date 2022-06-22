@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RecapTeamView: View {
+    var team: Team
+
     var body: some View {
         HStack(alignment: .center, spacing: 0) {
             RoundedPicture(
@@ -16,7 +18,7 @@ struct RecapTeamView: View {
             ).padding()
 
             VStack(alignment: .leading, spacing: 15) {
-                Text("2e")
+                Text("\(team.placeTmp)e\(team.placeTmp == 1 ? "r" : "")")
                     .font(.title)
                     .bold()
                     .scaledToFill()
@@ -24,15 +26,16 @@ struct RecapTeamView: View {
                     .lineLimit(1)
                 
                 VStack(alignment: .leading, spacing: 0) {
-                    Text("37 POINTS")
+                    Text("\(team.points) POINT\(team.points > 1 ? "s" : "")")
                         .font(.headline)
                         .bold()
                         .foregroundColor(.secondary)
+                        .textCase(.uppercase)
                         .scaledToFill()
                         .minimumScaleFactor(0.5)
                         .lineLimit(1)
                     
-                    Text("J 26 | G 17 | N 3 | P 6")
+                    Text("J \(team.numDaysPlayed) | G \(team.matchesWon) | N \(team.matchesDraw) | P \(team.matchesLost)")
                         .font(.subheadline)
                         .bold()
                         .foregroundColor(.secondary)
@@ -76,9 +79,9 @@ struct RecapTeamView: View {
     }
 }
 
-struct RecapTeamView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecapTeamView()
-            .previewLayout(.sizeThatFits)
-    }
-}
+//struct RecapTeamView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RecapTeamView()
+//            .previewLayout(.sizeThatFits)
+//    }
+//}

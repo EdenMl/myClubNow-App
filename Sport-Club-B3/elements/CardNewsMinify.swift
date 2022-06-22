@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardNewsMinify: View {
+    var news: News
     var body: some View {
         
         VStack {
@@ -15,18 +16,20 @@ struct CardNewsMinify: View {
                 VStack(alignment: .center, spacing: 0) {
                     SquarePicture(imageUrl: "img-bg-team", size: 80)
                         .padding(.bottom, 10)
-                    Chip(label: "fans", isSolid: true)
-                        
+                    
+                    if news.acceptedRole > 10 {
+                        Chip(label: news.displayAcceptedRole(), isSolid: true)
+                    }
                 }
                 .frame(width: 80)
                 
                 VStack(alignment: .leading, spacing: 0) {
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("RÉSULTATS DU WEEK-END")
+                        Text(news.title)
                             .fontWeight(.bold)
                             .textCase(.uppercase)
                             .lineLimit(1)
-                        Text("Résultats du week-end 23/24 avril 2022. Peu de matchs joués ce week-end (vacances scolaires obligent) mais 2 premiers titres pour l'équipe.")
+                        Text(news.content)
                             .font(.footnote)
                             .lineLimit(3)
                     }
@@ -43,7 +46,9 @@ struct CardNewsMinify: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                                 
-                        Button("Lire") {}
+                        Button("Lire") {
+                            
+                        }
                             .font(.system(size: 12))
                             .padding(.vertical, 5)
                             .padding(.horizontal, 20)
@@ -70,7 +75,8 @@ struct CardNewsMinify: View {
 
 struct CardNewsMinify_Previews: PreviewProvider {
     static var previews: some View {
-        CardNewsMinify()
-            .previewLayout(.sizeThatFits)
+        CardNewsMinify(news: News(id: 10, title: "RÉSULTATS DU WEEK-END", content: "Résultats du week-end 23/24 avril 2022. Peu de matchs joués ce week-end (vacances scolaires obligent) mais 2 premiers titres pour l'équipe.", acceptedRole: 10, active: true))
+                .previewLayout(.sizeThatFits)
+        
     }
 }

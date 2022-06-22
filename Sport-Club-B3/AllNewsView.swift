@@ -10,7 +10,6 @@ import SwiftUI
 struct AllNewsView: View {
     
     @StateObject var gD = GlobalData()
-    @State var limitTmp = 10
 
     var body: some View {
         ZStack {
@@ -22,14 +21,25 @@ struct AllNewsView: View {
                     ///- BARRE DU HAUT
                     SubheaderView(title: "Actualités")
                     
-                    VStack(alignment: .center, spacing: 0) {
-                        ForEach(0 ..< limitTmp, id:\.self) { i in
-                            CardNewsMinify()
+                    
+                    
+                        if gD.allNews.count > 0 {
+                            VStack(alignment: .center, spacing: 0) {
+                                ForEach(0 ..< gD.allNews.count, id:\.self) { i in
+                                    CardNewsMinify(news: gD.allNews[i] as! News)
+                                }
+                            }
+                            .padding()
+                            .background(.white)
+                            .padding(.bottom, gD.heightTabBar + 20.0)
+                        } else {
+                            Text("Aucune actualité disponible")
+                                .italic()
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .foregroundColor(.white)
+                                .padding(.bottom, gD.heightTabBar + 20.0)
                         }
-                    }
-                    .padding()
-                    .background(.white)
-                    .padding(.bottom, gD.heightTabBar + 20.0)
                 }
                 
             }

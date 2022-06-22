@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct CardMatchView: View {
-    var leagueName: String
-    var numDayInLeague: Int
+    var match: Match
+    var league: League
+    
+    @StateObject var gD = GlobalData()
     
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {            Text(leagueName + " - " + String(numDayInLeague) + "ème joumée")
+        VStack(alignment: .center, spacing: 0) {
+            Text(league.name + " - " + String(match.numDaysLeague) + "ème joumée")
                 .padding()
                 .font(.subheadline)
                 .frame(
@@ -23,31 +26,73 @@ struct CardMatchView: View {
             
             HStack(alignment: .center, spacing: 0) {
                 VStack(alignment: .center, spacing: 0) {
-                    RoundedPicture(
-                        imageUrl: "logo",
-                        size: 60
-                    )
-                    .padding()
+//                    RoundedPicture(
+//                        imageUrl: "logo",
+//                        size: 60
+//                    )
+//                    .padding()
                     
-                    Text("🎉")
-                        .bold()
-                        .textCase(.uppercase)
+                    if Int(gD.allSettings[0].result) == match.home.id {
+                        // TMP
+                        RoundedPicture(
+                            imageUrl: "logo",
+                            size: 60
+                        )
+                        .padding()
+                        // END TMP
+                        
+                        if match.pointsHomeTeam > match.pointsOutsideTeam {
+                            Text("🎉")
+                                .bold()
+                                .textCase(.uppercase)
+                        } else if match.pointsHomeTeam < match.pointsOutsideTeam {
+                            Text("😭")
+                                .bold()
+                                .textCase(.uppercase)
+                        }
+                    } else {
+                        Text(match.home.name)
+                            .bold()
+                            .textCase(.uppercase)
+                            .lineLimit(1)
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 
-                InformationMatchView()
+                InformationMatchView(match: match)
                     .frame(maxWidth: .infinity)
                 
                 VStack(alignment: .center, spacing: 0) {
-                    RoundedPicture(
-                        imageUrl: "caen",
-                        size: 60
-                    )
-                    .padding()
+//                    RoundedPicture(
+//                        imageUrl: "caen",
+//                        size: 60
+//                    )
+//                    .padding()
                     
-                    Text("Caen")
-                        .bold()
-                        .textCase(.uppercase)
+                    if Int(gD.allSettings[0].result) == match.outside.id {
+                        // TMP
+                        RoundedPicture(
+                            imageUrl: "logo",
+                            size: 60
+                        )
+                        .padding()
+                        // END TMP
+                        
+                        if match.pointsHomeTeam < match.pointsOutsideTeam {
+                            Text("🎉")
+                                .bold()
+                                .textCase(.uppercase)
+                        } else if match.pointsHomeTeam > match.pointsOutsideTeam {
+                            Text("😭")
+                                .bold()
+                                .textCase(.uppercase)
+                        }
+                    } else {
+                        Text(match.outside.name)
+                            .bold()
+                            .textCase(.uppercase)
+                            .lineLimit(1)
+                    }
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -59,11 +104,11 @@ struct CardMatchView: View {
     }
 }
 
-struct CardMatchView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardMatchView(leagueName: "ProLigue", numDayInLeague: 27)
-            .previewLayout(.sizeThatFits)
-            .environment(\.locale, Locale(identifier: "fr"))
-            .previewInterfaceOrientation(.landscapeRight)
-    }
-}
+//struct CardMatchView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardMatchView()
+//            .previewLayout(.sizeThatFits)
+//            .environment(\.locale, Locale(identifier: "fr"))
+//            .previewInterfaceOrientation(.landscapeRight)
+//    }
+//}
