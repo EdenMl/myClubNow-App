@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2408AAC82833BBCE005822AA"
-               BuildableName = "Sport-Club-B3.app"
+               BuildableName = "JS Cherbourg.app"
                BlueprintName = "Sport-Club-B3"
                ReferencedContainer = "container:Sport-Club-B3.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2408AAC82833BBCE005822AA"
-            BuildableName = "Sport-Club-B3.app"
+            BuildableName = "JS Cherbourg.app"
             BlueprintName = "Sport-Club-B3"
             ReferencedContainer = "container:Sport-Club-B3.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2408AAC82833BBCE005822AA"
-            BuildableName = "Sport-Club-B3.app"
+            BuildableName = "JS Cherbourg.app"
             BlueprintName = "Sport-Club-B3"
             ReferencedContainer = "container:Sport-Club-B3.xcodeproj">
          </BuildableReference>
