@@ -30,17 +30,24 @@ struct ContentView: View {
                         RecapTeamView(team: gD.allTeam[0])
                         
                         ///- DERNIER MATCH
-                        SubheaderView(title: "Dernier Match")
-                        CardMatchView(match: gD.allMatch[0], league: gD.allLeague[0])
+                        Group {
+                            SubheaderView(title: "Dernier Match")
+                            CardMatchView(match: gD.allMatch[0], league: gD.allLeague[0])
+                            CardMatchView(match: gD.allMatch[2], league: gD.allLeague[0])
+                        }
 
                         ///- PROCHAIN MATCH
-                        SubheaderView(title: "Prochain Match")
-                        CardMatchView(match: gD.allMatch[1], league: gD.allLeague[0])
+                        Group {
+                            SubheaderView(title: "Prochain Match")
+                            CardMatchView(match: gD.allMatch[1], league: gD.allLeague[0])
+                        }
 
 
                         ///- ACTUALITÉS
-                        SubheaderView(title: "Actualités")
-                        ContentLastNews(limit: 3)
+                        Group {
+                            SubheaderView(title: "Actualités")
+                            ContentLastNews(limit: 3)
+                        }
 
                         ///- CTA
                         CTAShopView()
