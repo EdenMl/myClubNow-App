@@ -46,6 +46,7 @@ struct InformationMatchView: View {
             
             Text(match.location)
                 .font(.footnote)
+                .foregroundColor(.black)
                 .lineLimit(3)
                 .frame(alignment: .center)
                 .frame(maxWidth: .infinity)

@@ -53,6 +53,7 @@ struct CardMatchView: View {
                     } else {
                         Text(match.home.name)
                             .bold()
+                            .foregroundColor(.black)
                             .textCase(.uppercase)
                             .lineLimit(1)
                     }
@@ -90,6 +91,7 @@ struct CardMatchView: View {
                     } else {
                         Text(match.outside.name)
                             .bold()
+                            .foregroundColor(.black)
                             .textCase(.uppercase)
                             .lineLimit(1)
                     }

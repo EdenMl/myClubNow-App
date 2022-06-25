@@ -31,10 +31,12 @@ struct CardNewsMinify: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Text(news.title)
                             .fontWeight(.bold)
+                            .foregroundColor(.black)
                             .textCase(.uppercase)
                             .lineLimit(1)
                         Text(news.content)
                             .font(.footnote)
+                            .foregroundColor(.black)
                             .lineLimit(2)
                     }
                     .padding(.bottom, 20)

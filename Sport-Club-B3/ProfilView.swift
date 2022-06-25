@@ -34,8 +34,10 @@ struct ProfilView: View {
                                 HStack {
                                     Text("Identité")
                                         .fontWeight(.medium)
+                                        .foregroundColor(.black)
                                     Spacer()
                                     Text("\(vm.me.firstname.capitalized) \(vm.me.lastname?.uppercased() ?? "")")
+                                        .foregroundColor(.black)
                                 }
                             }
                             .padding()
@@ -45,8 +47,10 @@ struct ProfilView: View {
                                 HStack {
                                     Text("Rôle")
                                         .fontWeight(.medium)
+                                        .foregroundColor(.black)
                                     Spacer()
                                     Text(vm.me.displayRole().capitalized)
+                                        .foregroundColor(.black)
                                 }
                             }
                             .padding()
@@ -56,11 +60,14 @@ struct ProfilView: View {
                                 HStack {
                                     Text("Anniversaire")
                                         .fontWeight(.medium)
+                                        .foregroundColor(.black)
                                     Spacer()
                                     if vm.me.birthday != nil {
                                         Text(vm.me.birthday!, style: .date)
+                                            .foregroundColor(.black)
                                     } else {
                                         Text("NaN")
+                                            .foregroundColor(.black)
                                     }
                                 }
                             }
@@ -71,11 +78,14 @@ struct ProfilView: View {
                                 HStack {
                                     Text("Création du compte")
                                         .fontWeight(.medium)
+                                        .foregroundColor(.black)
                                     Spacer()
                                     if vm.me.dateAdd != nil {
                                         Text(vm.me.dateAdd!, style: .date)
+                                            .foregroundColor(.black)
                                     } else {
                                         Text("NaN")
+                                            .foregroundColor(.black)
                                     }
                                 }
                             }

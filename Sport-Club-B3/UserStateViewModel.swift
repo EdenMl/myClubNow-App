@@ -75,6 +75,8 @@ class UserStateViewModel: ObservableObject {
         } else {
             // No Biometrics
             print("No Biometrics")
+            // -- En cas d'erreur "Thread 1: breakpoint 1.1 (1)",
+            // -- il faut activer le FaceID dans le simulator Features > FaceID > Enrolled
        }
     }
             

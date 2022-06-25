@@ -27,7 +27,7 @@ struct CTAShopView: View {
                 .padding()
             }
             .frame(width: 300, height: 100)
-            .background()
+            .background(.white)
             .padding()
         }
         .background(Color("bgColor"))
